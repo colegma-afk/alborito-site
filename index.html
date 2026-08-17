@@ -105,7 +105,7 @@
       <div class="section-head">
         <div>
           <h2>Pequeñas historias para grandes momentos</h2>
-          <p>Videos especiales de temporada. Toca una tarjeta para reproducir.</p>
+          <p>Los primeros 10 capítulos de la Temporada 1. Toca una tarjeta para reproducir.</p>
         </div>
       </div>
       <div class="grid cols-4" id="especiales-grid">
@@ -181,21 +181,26 @@
 
 <script src="assets/js/main.js" defer></script>
 <script>
-// Genera las 10 tarjetas de especiales a partir de datos (evita repetir markup 10x a mano)
+// Genera las 10 tarjetas de la Temporada 1 a partir de datos (evita repetir markup 10x a mano)
 var especiales = [
-  ["Navidad con Alborito","3–6 años"],["El cumpleaños del Bosque","4–8 años"],
-  ["La gran noche de las estrellas","5–9 años"],["La fiesta de las luciérnagas","3–6 años"],
-  ["El día de la amistad","4–7 años"],["La aventura bajo la lluvia","5–8 años"],
-  ["El misterio del árbol gigante","6–9 años"],["El viaje al espacio","6–10 años"],
-  ["El bosque nevado","3–7 años"],["La última semilla del año","5–9 años"]
+  ["Capítulo 1 · La semilla que tenía miedo","assets/video/alborito_capitulo_1_la_semilla_que_tenia_miedo.mp4"],
+  ["Capítulo 2 · El colibrí que aprendió a descansar","assets/video/alborito_capitulo_2_el_colibri_que_aprendio_a_descansar.mp4"],
+  ["Capítulo 3 · La luciérnaga que encontró su brillo","assets/video/alborito_capitulo_3_la_luciernaga_que_encontro_su_brillo.mp4"],
+  ["Capítulo 4 · El río que aprendió a esperar","assets/video/alborito_capitulo_4_el_rio_que_aprendio_a_esperar.mp4"],
+  ["Capítulo 5 · La nube que aprendió a compartir","assets/video/alborito_capitulo_5_la_nube_que_aprendio_a_compartir.mp4"],
+  ["Capítulo 6 · La ardilla que aprendió a compartir","assets/video/alborito_capitulo_6_la_ardilla_que_aprendio_a_compartir.mp4"],
+  ["Capítulo 7 · El búho que se atrevió a intentar","assets/video/alborito_capitulo_7_el_buho_que_se_atrevio_a_intentar.mp4"],
+  ["Capítulo 8 · La mariposa que encontró su camino","assets/video/alborito_capitulo_8_la_mariposa_que_encontro_su_camino.mp4"],
+  ["Capítulo 9 · El castor que aprendió a pedir ayuda","assets/video/alborito_capitulo_9_el_castor_que_aprendio_a_pedir_ayuda.mp4"],
+  ["Capítulo 10 · La flor que descubrió su color","assets/video/alborito_capitulo_10_la_flor_que_descubrio_su_color.mp4"]
 ];
 var grid = document.getElementById("especiales-grid");
 especiales.forEach(function(e){
   var art = document.createElement("article"); art.className = "card";
   art.innerHTML =
-    '<button class="watch" data-title="'+e[0]+'" data-video="assets/video/placeholder.mp4">'+
+    '<button class="watch" data-title="'+e[0]+'" data-video="'+e[1]+'">'+
     '<div class="thumb"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#eff7e8"/><path d="M10 8.5v7l6-3.5-6-3.5Z" fill="#287147"/></svg></div>'+
-    '<div class="body"><span class="tag">Especial</span><h3>'+e[0]+'</h3><div class="meta"><span class="pill">'+e[1]+'</span></div></div>'+
+    '<div class="body"><span class="tag">Temporada 1</span><h3>'+e[0]+'</h3></div>'+
     '</button>';
   grid.appendChild(art);
 });
