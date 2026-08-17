@@ -88,9 +88,8 @@ p{margin:0 0 var(--space-3); max-width:66ch; color:var(--text-soft);}
 .hero h1{font-size:clamp(32px,5vw,52px); line-height:1.08; margin-bottom:16px;}
 .hero p.lead{font-size:18px; color:var(--text-soft); max-width:52ch;}
 .hero .buttons{display:flex; flex-wrap:wrap; gap:12px; margin-top:24px;}
-.hero-art{position:relative; aspect-ratio:1/1; background:radial-gradient(circle at 30% 30%, var(--accent-soft), transparent 70%);
-  border-radius:var(--radius-lg); display:flex; align-items:center; justify-content:center;}
-.hero-art svg{width:78%; height:78%;}
+.hero-art{position:relative; aspect-ratio:4/3; border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-md);}
+.hero-art img{width:100%; height:100%; object-fit:cover; border-radius:var(--radius-lg);}
 
 /* Sections */
 .section{padding:var(--space-6) 0;}
