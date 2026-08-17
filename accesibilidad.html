@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Accesibilidad · Alborito</title>
+<meta name="description" content="Panel de accesibilidad Alborito: contraste, tamaño de texto y reducción de movimiento.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://alborito.example.com/accesibilidad.html">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><svg class="seed" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2c4 3 7 7 7 11a7 7 0 1 1-14 0c0-4 3-8 7-11Z" fill="#8cbd6e"/></svg>Alborito</a>
+    <ul class="navlinks">
+      <li><a href="explorar.html">Explorar</a></li>
+      <li><a href="index.html#aventuras">Aventuras</a></li>
+      <li><a href="index.html#especiales">Especiales</a></li>
+      <li><a href="recursos.html">Recursos</a></li>
+      <li><a href="precios.html">Precios</a></li>
+      <li><a href="accesibilidad.html" aria-current="page">Accesibilidad</a></li>
+    </ul>
+    <a class="navcta" href="precios.html">Empezar gratis</a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+<main id="main">
+  <div class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">Inicio</a> / Accesibilidad</p>
+      <h1>Diseño Universal para el Aprendizaje</h1>
+      <p>La accesibilidad es parte de la arquitectura desde el inicio, no un agregado posterior. Ajusta estas preferencias — se guardan en tu navegador.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="a11y-controls" role="group" aria-label="Preferencias de accesibilidad">
+        <button type="button" data-toggle="contrast" aria-pressed="false">Alto contraste</button>
+        <button type="button" data-toggle="text-lg" aria-pressed="false">Texto más grande</button>
+      </div>
+      <p style="margin-top:20px;font-size:13.5px;">El sitio respeta automáticamente <code>prefers-reduced-motion</code> del sistema operativo: si tienes activada la reducción de movimiento, las animaciones y transiciones se desactivan.</p>
+
+      <h2 style="font-size:22px;margin-top:40px;">Compromisos de accesibilidad</h2>
+      <div class="grid cols-3">
+        <div class="card"><div class="body"><h3 style="font-size:16px;">Navegación por teclado</h3><p style="font-size:13.5px;">Todo control es alcanzable con Tab, con estado de foco visible.</p></div></div>
+        <div class="card"><div class="body"><h3 style="font-size:16px;">Lectores de pantalla</h3><p style="font-size:13.5px;">Roles ARIA en modales y controles interactivos, texto alternativo en imágenes.</p></div></div>
+        <div class="card"><div class="body"><h3 style="font-size:16px;">Predictibilidad</h3><p style="font-size:13.5px;">Sin sonidos inesperados ni autoplay fuera del modal que el usuario abre.</p></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container footer-bottom"><span>© 2026 Alborito.</span><span><a href="index.html">Volver al inicio</a></span></div></footer>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

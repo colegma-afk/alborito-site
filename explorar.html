@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Explorar el catálogo · Alborito</title>
+<meta name="description" content="Explora cuentos, videos y actividades de Alborito filtrando por edad, asignatura y habilidad.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://alborito.example.com/explorar.html">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><svg class="seed" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2c4 3 7 7 7 11a7 7 0 1 1-14 0c0-4 3-8 7-11Z" fill="#8cbd6e"/></svg>Alborito</a>
+    <ul class="navlinks">
+      <li><a href="explorar.html" aria-current="page">Explorar</a></li>
+      <li><a href="index.html#aventuras">Aventuras</a></li>
+      <li><a href="index.html#especiales">Especiales</a></li>
+      <li><a href="recursos.html">Recursos</a></li>
+      <li><a href="precios.html">Precios</a></li>
+      <li><a href="accesibilidad.html">Accesibilidad</a></li>
+    </ul>
+    <a class="navcta" href="precios.html">Empezar gratis</a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+<main id="main">
+  <div class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">Inicio</a> / Explorar</p>
+      <h1>Explora el catálogo completo</h1>
+      <p>Filtra por edad, asignatura, habilidad o formato para encontrar el contenido justo para cada momento.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <form class="filter-bar" aria-label="Filtros de catálogo">
+        <label class="visually-hidden" for="f-edad">Edad</label>
+        <select id="f-edad"><option>Edad: todas</option><option>3–5 años</option><option>6–8 años</option><option>9–12 años</option></select>
+        <select id="f-asig"><option>Asignatura: todas</option><option>Lenguaje</option><option>Ciencias</option><option>Matemática</option><option>Socioemocional</option></select>
+        <select id="f-form"><option>Formato: todos</option><option>Cuento</option><option>Video</option><option>Juego</option><option>Actividad</option></select>
+        <input type="search" placeholder="Buscar por título o personaje…" aria-label="Buscar">
+      </form>
+      <div class="grid cols-4" id="catalogo"></div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <span>© 2026 Alborito.</span>
+    <span><a href="index.html">Volver al inicio</a></span>
+  </div>
+</footer>
+<script src="assets/js/main.js" defer></script>
+<script>
+var items = [
+  ["El cumpleaños del Bosque","Cuento","4–8 años"],["El viaje al espacio","Video","6–10 años"],
+  ["La última semilla del año","Cuento","5–9 años"],["Memoria del bosque","Juego","4–7 años"],
+  ["Ficha: comprensión lectora nivel 1","Actividad","6–8 años"],["El misterio del árbol gigante","Video","6–9 años"],
+  ["La fiesta de las luciérnagas","Cuento","3–6 años"],["Emociones en el bosque","Actividad","5–8 años"]
+];
+var wrap = document.getElementById("catalogo");
+items.forEach(function(i){
+  var el = document.createElement("article"); el.className = "card";
+  el.innerHTML =
+    '<div class="thumb"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="#eff7e8"/><path d="M9 9h6v6H9z" fill="#8cbd6e"/></svg></div>'+
+    '<div class="body"><span class="tag">'+i[1]+'</span><h3>'+i[0]+'</h3><div class="meta"><span class="pill">'+i[2]+'</span></div></div>';
+  wrap.appendChild(el);
+});
+</script>
+</body>
+</html>
