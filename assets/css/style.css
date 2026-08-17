@@ -54,7 +54,8 @@ p{margin:0 0 var(--space-3); max-width:66ch; color:var(--text-soft);}
 .brand{display:flex; align-items:center; gap:10px; font-family:var(--serif); font-size:20px; font-weight:700; text-decoration:none; color:var(--forest);}
 :root[data-theme="dark"] .brand{color:var(--leaf);}
 @media (prefers-color-scheme: dark){.brand{color:var(--leaf);}}
-.brand .seed{width:26px;height:26px;flex:none;}
+.brand .seed{width:28px;height:28px;flex:none;border-radius:50%;object-fit:cover;background:var(--accent-soft);}
+.brand sup{font-size:11px; margin-left:1px; color:var(--text-soft); font-weight:400;}
 .navlinks{display:flex; gap:var(--space-4); list-style:none; margin:0; padding:0;}
 .navlinks a{text-decoration:none; font-size:14.5px; color:var(--text); padding:6px 2px; border-bottom:2px solid transparent;}
 .navlinks a:hover, .navlinks a[aria-current="page"]{border-color:var(--accent);}
